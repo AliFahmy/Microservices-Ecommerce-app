@@ -21,7 +21,6 @@ app.use(
     secure: true,
   })
 );
-
 app.use(currentUserRouter);
 app.use(signupRouter);
 app.use(signinRouter);
@@ -29,7 +28,6 @@ app.use(signoutRouter);
 app.all('*', () => {
   throw new NotFoundError();
 });
-
 app.use(errorHandler);
 
 const start = async () => {
