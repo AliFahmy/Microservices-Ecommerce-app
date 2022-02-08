@@ -6,7 +6,7 @@ export default () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const { doRequest, errors } = useRequest({
-    url: '/api/users/signup',
+    url: '/api/users/signin',
     method: 'post',
     body: {
       email,
@@ -32,7 +32,7 @@ export default () => {
         position: 'absolute',
       }}
     >
-      <h1 style={{ alignSelf: 'center', color: 'darkgoldenrod' }}>Sign Up</h1>
+      <h1 style={{ alignSelf: 'center', color: 'darkgoldenrod' }}>Sign In</h1>
       <div className="form-group" style={{ alignSelf: 'center' }}>
         <label>Email Address</label>
         <input
@@ -54,7 +54,7 @@ export default () => {
       </div>
       {errors}
       <button className="btn btn-primary mt-2" style={{ alignSelf: 'center' }}>
-        Signup
+        Signin
       </button>
     </form>
   );
