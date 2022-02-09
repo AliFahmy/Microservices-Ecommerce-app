@@ -18,7 +18,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@ticketsmarche/common": "^1.0.3",
+    "@ticketsmarche/common": "^1.0.4",
     "@types/cookie-session": "^2.0.44",
     "@types/express": "^4.17.13",
     "cookie-session": "^2.0.0",

@@ -5,7 +5,7 @@ import { Ticket } from '../models/ticket';
 const router = Router();
 
 router.post(
-  '/api/ticketing',
+  '/api/tickets',
   requireAuth,
   [
     body('title').notEmpty().withMessage('Ticket Title is Required'),

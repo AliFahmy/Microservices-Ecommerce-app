@@ -7,6 +7,7 @@ import {
   errorHandler,
 } from '@ticketsmarche/common';
 import { createTicketRouter } from './routes/createTicket';
+import { getTicket } from './routes/getTicket';
 
 const app = express();
 
@@ -20,6 +21,7 @@ app.use(
 );
 app.use(currentUser);
 app.use(createTicketRouter);
+app.use(getTicket);
 app.all('*', () => {
   throw new NotFoundError();
 });
