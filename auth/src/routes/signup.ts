@@ -1,11 +1,12 @@
 import express, { Request, Response } from 'express';
 import { body, validationResult } from 'express-validator';
 import jwt from 'jsonwebtoken';
-import { DatabaseConnectionError } from '../errors/database-connection-error';
 import { User } from '../models/user';
-import { RequestValidationError } from './../errors/request-validation-error';
-import { BadRequestError } from './../errors/bad-request-error';
-import { validateRequest } from '../middlewares/validateRequest';
+import {
+  validateRequest,
+  BadRequestError,
+  RequestValidationError,
+} from '@ticketsmarche/common';
 const router = express.Router();
 
 router.post(
